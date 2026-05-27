@@ -4,8 +4,8 @@ const fs = require('fs');
 const path = require('path');
 const { JSDOM } = require('jsdom');
 
-const WG_HTML = fs.readFileSync(path.join(__dirname, '..', 'wordguesser.html'), 'utf8');
-const WG_JS = fs.readFileSync(path.join(__dirname, '..', 'assets', 'wordguesser.js'), 'utf8');
+const WG_HTML = fs.readFileSync(path.join(__dirname, '..', 'games', 'wordguesser', 'index.html'), 'utf8');
+const WG_JS = fs.readFileSync(path.join(__dirname, '..', 'games', 'wordguesser', 'wordguesser.js'), 'utf8');
 const STYLES_CSS = fs.readFileSync(path.join(__dirname, '..', 'assets', 'styles.css'), 'utf8');
 
 function createGameDOM() {

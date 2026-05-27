@@ -4,8 +4,8 @@ const fs = require('fs');
 const path = require('path');
 const { JSDOM } = require('jsdom');
 
-const SNAKE_HTML = fs.readFileSync(path.join(__dirname, '..', 'snake.html'), 'utf8');
-const SNAKE_JS = fs.readFileSync(path.join(__dirname, '..', 'assets', 'snake.js'), 'utf8');
+const SNAKE_HTML = fs.readFileSync(path.join(__dirname, '..', 'games', 'snake', 'index.html'), 'utf8');
+const SNAKE_JS = fs.readFileSync(path.join(__dirname, '..', 'games', 'snake', 'snake.js'), 'utf8');
 const STYLES_CSS = fs.readFileSync(path.join(__dirname, '..', 'assets', 'styles.css'), 'utf8');
 
 function createGameDOM() {

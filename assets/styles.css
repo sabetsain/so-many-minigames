@@ -489,6 +489,15 @@ body {
     transform: scale(1.05);
 }
 
+/* ---- Breakout game over ---- */
+.breakout-page .game-over {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.88);
+    display: none;
+    z-index: 100;
+}
+
 /* ---- Snake responsive ---- */
 @media (max-width: 500px) {
     .arcade-cabinet {

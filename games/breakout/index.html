@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breakout &mdash; VOTD Games</title>
+    <link rel="stylesheet" href="../../assets/styles.css">
+</head>
+<body class="breakout-page">
+    <!-- CRT screen housing -->
+    <div class="arcade-cabinet">
+        <!-- Top bar -->
+        <div class="arcade-header">
+            <a href="../../index.html" class="back-link">&laquo; MENU</a>
+            <div class="arcade-title">BREAKOUT</div>
+            <div class="arcade-score">
+                SCORE <span id="score" class="score-digits">0000</span>
+            </div>
+        </div>
+
+        <!-- CRT screen -->
+        <div class="crt-screen">
+            <div class="crt-scanlines"></div>
+            <div class="crt-glow"></div>
+            <canvas id="gameCanvas" width="400" height="400"></canvas>
+        </div>
+
+        <!-- Bottom bar -->
+        <div class="arcade-footer">
+            <span>&larr;&rarr; MOVE</span>
+            <span>LIVES: <span id="lives">3</span></span>
+            <span>LVL: <span id="level">1</span></span>
+        </div>
+
+        <!-- Game over overlay -->
+        <div class="game-over" id="gameOver">
+            <div class="game-over-box">
+                <h2>GAME OVER</h2>
+                <p>SCORE: <span id="finalScore">0</span></p>
+                <p>BEST: <span id="highScore">0</span></p>
+                <button onclick="restartGame()">INSERT COIN</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./breakout.js"></script>
+</body>
+</html>

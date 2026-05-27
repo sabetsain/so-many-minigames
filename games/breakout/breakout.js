@@ -149,7 +149,8 @@ function reflectOffPaddle(state) {
     const newDx = BALL_SPEED * Math.sin(angle);
     // Ensure minimum vertical component to prevent horizontal-only bouncing
     const rawDy = -BALL_SPEED * Math.cos(angle);
-    const newDy = Math.abs(rawDy) < 0.5 ? -0.5 : rawDy;
+    // Min |rawDy| = BALL_SPEED * cos(maxAngle) = 4 * cos(60°) = 2, so ball can never go flat
+    const newDy = rawDy;
 
     return Object.assign({}, state, {
         ball: Object.assign({}, ball, {
@@ -377,6 +378,7 @@ function initGame() {
 
     // Exposed for the restart button (onclick="restartGame()")
     window.restartGame = function() {
+        stopLoop();
         gameState = createInitialState();
         updateUI(gameState);
         gameOverEl.style.display = 'none';
